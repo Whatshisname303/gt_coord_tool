@@ -21,10 +21,10 @@ type User struct {
 }
 
 type Node struct {
-	Id        int    `json:"id"`
-	Longitude int    `json:"longitude"`
-	Latitude  int    `json:"latitude"`
-	Name      string `json:"name,omitempty"`
+	Id        int     `json:"id"`
+	Longitude float64 `json:"longitude"`
+	Latitude  float64 `json:"latitude"`
+	Name      string  `json:"name,omitempty"`
 }
 
 type Path struct {
@@ -133,5 +133,5 @@ func main() {
 		})
 	})
 
-	router.Run("localhost:5121")
+	router.Run(":3121")
 }
